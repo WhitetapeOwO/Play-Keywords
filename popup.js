@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   goToGithubButton.addEventListener('click', function() {
-    chrome.tabs.create({ url: 'https://github.com/your-username/play-keywords' });
+    chrome.tabs.create({ url: 'https://github.com/WhitetapeOwO/Play-Keywords.git' });
   });
 
   feedbackButtonButton.addEventListener('click', function() {
