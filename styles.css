@@ -1,0 +1,187 @@
+.play-keywords-button {
+  transition: transform 0.3s ease;  /* Smooth transition for resizing */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;  /* Minimum width */
+  max-width: 60px;  /* Maximum width, adjust as needed */
+  height: 100%;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.play-keywords-button img {
+  transition: width 0.3s ease, height 0.3s ease;  /* Smooth transitions for width and height changes */
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+}
+
+.play-keywords-button:hover img {
+  opacity: 1;
+}
+
+
+#playKeywordsPopup {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: #202124;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 16px;
+  z-index: 1000;
+  display: none;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+  width: 220px;
+}
+
+#playKeywordsPopup:hover {
+  border-color: #E2167E;
+}
+
+#playKeywordsPopup div {
+  margin-bottom: 16px;
+}
+
+#playKeywordsPopup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e8eaed;
+}
+
+#playKeywordsPopup select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #E2167E;
+  border-radius: 4px;
+  background-color: #202124;
+  color: #e8eaed;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(to right, #E2167E, #E6572C);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+#playKeywordsPopup .switch-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#playKeywordsPopup .switch-container label {
+  margin-left: 8px;
+  margin-bottom: 0;
+}
+
+#playKeywordsPopup .checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+#applyKeywords {
+  background-image: linear-gradient(to right, #E2167E, #E6572C);
+  color: #e8eaed;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#applyKeywords:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at var(--x) var(--y), rgba(255,255,255,0.3), transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#applyKeywords:hover::before {
+  opacity: 1;
+}
+
+#resetButton {
+  background-image: none;
+  background-color: #3a3a3a;
+  color: #e8eaed;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: font-weight 0.3s ease;
+}
+
+#resetButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: border-color 0.3s ease;
+}
+
+#resetButton:hover::before {
+  border: 2px solid #E2167E;
+}
+
+

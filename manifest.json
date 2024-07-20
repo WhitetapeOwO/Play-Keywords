@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "玩轉 Keywords",
+  "version": "1.0",
+  "description": "Play Keywords_description",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://www.google.com/*",
+    "*://api-free.deepl.com/*",
+    "https://api.zhconvert.org/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/active_btn.png",
+      "48": "assets/active_btn.png",
+      "128": "assets/active_btn.png"
+    }
+  },
+  "icons": {
+    "16": "assets/active_btn.png",
+    "48": "assets/active_btn.png",
+    "128": "assets/active_btn.png"
+  },
+  "web_accessible_resources": [{
+    "resources": ["assets/*"],
+    "matches": ["*://www.google.com/*"]
+  }]
+}

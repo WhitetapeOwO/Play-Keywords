@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Keywords</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      background-color: #202124;
+      color: #e8eaed;
+      margin: 0;
+    }
+
+    #title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+      flex-direction: column;
+    }
+
+    #title img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 5%;
+    }
+
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-image: linear-gradient(to right, #E2167E, #E6572C);
+      color: #e8eaed;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button img {
+      margin-right: 8px;
+      height: 20px;
+    }
+
+    button:hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at var(--x) var(--y), rgba(255,255,255,0.3), transparent 80%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    button:hover::before {
+      opacity: 1;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      font-size: 12px;
+    }
+
+    .separator {
+      border-top: 1px solid #e8eaed;
+      margin: 20px 0;
+    }
+
+    #playKeywordsPopup {
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      background-color: #202124;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      padding: 16px;
+      z-index: 1000;
+      display: none;
+      border: 1px solid transparent;
+      transition: border-color 0.2s;
+      width: 220px;
+    }
+
+    #playKeywordsPopup:hover {
+      border-color: #E2167E;
+    }
+
+    #reportBug, #goToGithub{
+      background-image: none;
+      background-color: #3a3a3a;
+      color: #e8eaed;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: font-weight 0.3s ease;
+    }
+
+    #reportBug::before, #goToGithub::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid transparent;
+      border-radius: 20px;
+      transition: border-color 0.3s ease;
+    }
+
+    #reportBug:hover::before, #goToGithub:hover::before {
+      border: 2px solid #E2167E;
+    }
+
+    a{text-decoration:none;}
+    a:link{
+    color:#e8eaed;
+    }
+    a:visited {
+    color:#ffffff;
+    background-color:red;
+    }
+    a:hover {
+    text-decoration:underline;
+    background-color:#fafafa;
+    color:gray;
+    }
+    a:active {
+    text-decoration:none;
+    background-color:gray;
+    color:#fafafa;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="title">
+    <img src="assets/active_btn.png" alt="logo">
+    <span>Thanks for using 玩轉 Keywords 🍺</span><br><br>
+    <span>⎛⎝ ≽  >  ⩊   < ≼ ⎠⎞</span>
+  </div>
+  <button id="reportBug">🐛 錯誤回報</button>
+  <button id="goToGithub"><img src="assets/github.svg" alt="Github">Github 連結</button>
+  <button id="feedbackButton">💬 意見回饋</button>
+  <div class="separator"></div>
+  <div class="contact-info">
+    聯絡開發者：<br>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alex.liang0812@gmail.com">alex.liang0812@gmail.com</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
