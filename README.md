@@ -8,6 +8,7 @@
 針對台灣中文使用者，我們特別使用了繁化姬的 API 服務，確保翻譯結果經過「[繁化姬](https://zhconvert.org/)」的處理，使用語更加道地、更加逮丸。
 
 **立即安裝「Shift 一鍵翻譯」，體驗前所未有的便捷搜尋方式，讓你的搜尋體驗瞬間提升！**
+---
 
 **Shift One-Click Translation: Break Language Barriers in Your Searches!**
 
